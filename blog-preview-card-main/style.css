@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap');
+
+:root {
+    --yellow: #C0990C;
+    --white: #fff;
+    --gray: #6B6B6B;
+    --black: #000;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+/* font-family: "Figtree", sans-serif; */
+
+body{
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.card{
+    background: var(--white);
+    width: 350px;
+    box-shadow: 10px 7px 0 rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+.card-image img{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px; 
+}
+
+.card-content{
+    padding: 10px;
+}
+.card-content h2:hover{
+    color: var(--yellow);
+}
+.card-category{
+    background-color: var(--yellow);
+    color: #000;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.card-date{
+    display: block;
+    font-size: 12px;
+    margin-top: 15px;
+    color: #000;
+}
+.card-title{
+    font-size: 24px;
+    margin:10px 0; 
+    color: #000;
+}
+.card-author{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    margin-right: 10px;
+}
+.card-author img{
+    border-radius: 50%;
+   width: 30px;
+   height: 30px;
+}
+.card-author span{
+   margin: 0 10px;
+}
+/*desktop*/
+@media(max-width:1440){
+    body{
+        justify-content: center;
+    }
+    .card{
+        width: 350px;
+    }
+    .card-title{
+        font-size: 28px;
+    }
+    .card-descprition{
+        font-size: 16px;
+    }
+}
+
+/*mobile*/
+@media(max-width:320px){
+    .card{
+        width: 100% /* Tam görüntü alanı genişliğini ele alalım */
+    }
+    .card-content{
+      padding: 15px; /* Daha küçük ekranlar için dolguyu azaltın */
+    }
+    .card-title{
+        font-size: 20px;   /* Başlık için yazı tipi boyutunu azaltın */
+    }
+    .card-descprition{
+        font-size: 12px; /* Açıklama için yazı tipi boyutunu azaltın */
+    }
+}
